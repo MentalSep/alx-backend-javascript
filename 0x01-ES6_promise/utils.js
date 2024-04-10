@@ -1,3 +1,13 @@
-import handleProfileSignup from './6-final-user';
+export function uploadPhoto() {
+  return Promise.resolve({
+    status: 200,
+    body: 'photo-profile-1',
+  });
+}
 
-console.log(handleProfileSignup('Bob', 'Dylan', 'bob_dylan.jpg'));
+export function createUser() {
+  return Promise.resolve({
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+  });
+}
