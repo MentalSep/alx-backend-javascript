@@ -1,8 +1,11 @@
-import fs from 'fs/promises';
+import fs from 'fs';
+import { promisify } from 'util';
+
+const readFile = promisify(fs.readFile);
 
 async function readDatabase(path) {
   try {
-    const data = await fs.readFile(path, 'utf8');
+    const data = await readFile(path, 'utf8');
     const lines = data.trim().split('\n').filter((line) => line.trim() !== '');
     const students = lines.slice(1).map((line) => line.split(','));
 
