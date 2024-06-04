@@ -8,3 +8,4 @@ function setupRoutes(app) {
 }
 
 export default setupRoutes;
+module.exports = setupRoutes;
