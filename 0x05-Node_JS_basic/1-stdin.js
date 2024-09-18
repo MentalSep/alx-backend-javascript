@@ -12,7 +12,5 @@ rl.question("", (name) => {
 
   rl.close();
 
-  if (!process.stdin.isTTY) {
-    console.log("This important software is now closing");
-  }
+  console.log("This important software is now closing");
 });
